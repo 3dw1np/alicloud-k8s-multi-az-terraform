@@ -13,3 +13,7 @@ variable "db_connection" {
 variable "db_credential" {
   description = "Database credential for RDS"
 }
+
+variable "domain_name" {
+  description = "Domain name to add records"
+}

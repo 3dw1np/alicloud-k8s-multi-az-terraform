@@ -10,4 +10,5 @@ module "apps" {
   cluster_connection_ip = "${var.cluster_connection_ip}"
   db_connection = "${var.db_connection}"
   db_credential = "${var.db_credential}"
+  domain_name = "${var.domain_name}"
 }

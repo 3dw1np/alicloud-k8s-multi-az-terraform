@@ -10,3 +10,4 @@ db_credential = {
   username = "mysqlroot"
   password = "Password#3"
 }
+domain_name = "alicloudlabs.win"

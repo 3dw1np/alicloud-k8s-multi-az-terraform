@@ -13,3 +13,7 @@ variable "db_credential" {
     password = "password"
 	}
 }
+
+variable "domain_name" {
+  description = "Domain name to add records"
+}

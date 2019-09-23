@@ -119,3 +119,10 @@ resource "kubernetes_service" "svc1" {
 	}
 	depends_on = ["kubernetes_deployment.app1"]
 }
+
+resource "alicloud_dns_record" "svc1" {
+  name = "${var.domain_name}"			# A domain name (e.g. alicloud.org) registered under your Alibaba Cloud account
+  host_record = "${var.app1["name"]}"
+  type = "A"
+  value = "${kubernetes_service.svc1.load_balancer_ingress.0.ip}"
+}
