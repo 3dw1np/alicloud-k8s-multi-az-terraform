@@ -6,8 +6,8 @@ resource "alicloud_cs_kubernetes" "k8s" {
   worker_instance_types = ["${var.worker_instance_type}", "${var.worker_instance_type}", "${var.worker_instance_type}"]
   worker_numbers        = "${var.worker_numbers}"
   password              = "${var.ssh_password}"
-  pod_cidr              = "176.16.0.0/16"
-  service_cidr          = "176.19.0.0/20"
+	pod_cidr              = "172.20.0.0/16"
+	service_cidr          = "172.30.0.0/16"
   node_cidr_mask        = 25
   enable_ssh            = true
   slb_internet_enabled  = true

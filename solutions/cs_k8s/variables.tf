@@ -8,6 +8,11 @@ variable "vpc_id" {
 
 variable "vswitch_ids" {
   description = "Ids of the vswitchs"
+  type    = "list"
+}
+variable "vswitch_cidrs" {
+  description = "CIDRs of the vswitchs"
+  type    = "list"
 }
 
 variable "master_instance_type" {
@@ -27,4 +32,8 @@ variable "ssh_password" {
 }
 variable "kube_cli" {			
   description = "K8S config & key files output path in your local machine"
+}
+
+variable "db_credential" {
+  description = "Database credential for RDS"
 }
