@@ -1,3 +1,5 @@
+provider "alicloud" {}
+
 module "cs" {
   source = "../../modules/cs"
   name   = "${var.name}"

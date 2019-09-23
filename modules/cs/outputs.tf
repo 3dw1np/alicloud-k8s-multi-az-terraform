@@ -9,3 +9,6 @@ output "cluster_name" {
 output "cluster_nodes" {
   value = "${alicloud_cs_kubernetes.k8s.nodes}"
 }
+output "cluster_connection_ip" {
+  value = "${alicloud_cs_kubernetes.k8s.connections["master_public_ip"]}"
+}
