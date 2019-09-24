@@ -8,34 +8,34 @@ variable "vpc_id" {
 
 variable "vswitch_ids" {
   description = "Ids of the vswitchs"
-  default = []
+  default     = []
 }
 
 variable "master_instance_type" {
   description = "Instance type of master nodes"
-  default = "ecs.n4.small"
+  default     = "ecs.n4.small"
 }
 
 variable "worker_instance_type" {
   description = "Instance type of worker nodes"
-  default = "ecs.n4.small"
+  default     = "ecs.n4.small"
 }
 
 variable "worker_numbers" {
   description = "Number of worker nodes"
-  default = [1, 2, 3]
+  default     = [1, 2, 3]
 }
 
 variable "ssh_password" {
   description = "Ssh password for the cluster node"
 }
 
-variable "kube_cli" {			
+variable "kube_cli" {
   description = "K8S config & key files output path in your local machine"
-	default = {
-    cfg = "~/.kube/config"
+  default = {
+    cfg         = "~/.kube/config"
     client_cert = "~/.kube/client-cert.pem"
-    client_key = "~/.kube/client-key.pem"
-    k8s_ca = "~/.kube/cluster-ca-cert.pem"
-	}
+    client_key  = "~/.kube/client-key.pem"
+    k8s_ca      = "~/.kube/cluster-ca-cert.pem"
+  }
 }

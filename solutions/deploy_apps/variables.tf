@@ -1,4 +1,4 @@
-variable "kube_cli" {			
+variable "kube_cli" {
   description = "K8S config & key files output path in your local machine"
 }
 

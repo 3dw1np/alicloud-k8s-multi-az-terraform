@@ -8,10 +8,10 @@ variable "db_connection" {
 
 variable "db_credential" {
   description = "Database credential for RDS"
-	default = {
+  default = {
     username = "root"
     password = "password"
-	}
+  }
 }
 
 variable "domain_name" {

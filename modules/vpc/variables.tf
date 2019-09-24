@@ -8,5 +8,5 @@ variable "cidr" {
 
 variable "az_list" {
   description = "List of availability zones to use"
-  default = []
+  default     = []
 }

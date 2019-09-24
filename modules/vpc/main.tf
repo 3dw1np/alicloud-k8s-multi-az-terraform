@@ -1,11 +1,11 @@
 resource "alicloud_vpc" "default" {
-  name        = "${var.name}"
-  cidr_block  = "${var.cidr}"
+  name       = "${var.name}"
+  cidr_block = "${var.cidr}"
 }
 
 resource "alicloud_nat_gateway" "nat_gateway" {
-  vpc_id          = "${alicloud_vpc.default.id}"
-  specification   = "Small"
+  vpc_id        = "${alicloud_vpc.default.id}"
+  specification = "Small"
 
   depends_on = ["alicloud_vswitch.default"]
 }
